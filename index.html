@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div">
+        <div class="brett">
+            <div class="rute" id="en" kolonne="1" rad="1"></div>
+            <div class="rute" id="to" kolonne="2" rad="1"></div>
+            <div class="rute" id="tre" kolonne="3" rad="1"></div>
+            <div class="rute" id="fire" kolonne="1" rad="2"></div>
+            <div class="rute" id="fem" kolonne="2" rad="2"></div>
+            <div class="rute" id="seks" kolonne="3" rad="2"></div>
+            <div class="rute" id="syv" kolonne="1" rad="3"></div>
+            <div class="rute" id="atte" kolonne="2" rad="3"></div>
+            <div class="rute" id="ni" kolonne="3" rad="3"></div>
+        </div>
+    </div>
+
+    <div class="restartButton hideButton">
+        <h1 class="whoWon">Ingen Vant</h1>
+        <div class="button" onclick="restart()">Spill På Nytt</div>
+    </div>
+
+    <div class="players">
+        <h3 class="spillere">Spillere: <b>1</b></h3>
+        <div class="choosePlayers">
+            <span class="enSpiller active">1</span>
+            <span class="toSpillere">2</span>
+        </div>
+    </div>
+
+    <div class="points">
+        <div class="redPoints point">
+            <h3 class="redTitle title">Rød:</h3>
+            <h2 class="redScore score">0</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="tiePoints point">
+            <h3 class="tieTitle title">Uavgjort:</h3>
+            <h2 class="tieScore score">0</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="bluePoints point">
+            <h3 class="blueTitle title">Blå:</h3>
+            <h2 class="blueScore score">0</h2>
+        </div>
+
+        <h2 class="resetPoints point">Nullstill Poeng</h2>
+        <div class="divider"></div>
+        <h2 class="nullstillBrett point" onclick="person = 'x';restart()">Nullstill Brett</h2>
+    </div>
+
+    <script src="./jquery.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
