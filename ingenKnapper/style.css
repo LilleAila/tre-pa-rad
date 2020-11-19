@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*background-color: lightgray;*/
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(to bottom right, #00ff00 0%, #0000ff 100%);
+}
+
+.div {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: filter 1s ease-out;
+  -webkit-transition: filter 1s ease-out;
+  -moz-transition: filter 1s ease-out;
+  -o-transition: filter 1s ease-out;
+  -mx-transition: filter 1s ease-out;
+}
+
+.blurPointerNone {
+  pointer-events: none;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.brett {
+  width: 70vmin;
+  height: 70vmin;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  position: relative;
+}
+
+.rute {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  cursor: pointer;
+}
+
+.x:before {
+  content: "";
+  background-color: #ff0000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 85%;
+  width: 10%;
+}
+
+.x:after {
+  content: "";
+  background-color: #ff0000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  height: 85%;
+  width: 10%;
+}
+
+.o:before {
+  content: "";
+  background: radial-gradient(circle at center, transparent 56%, #00ccff 25.5%);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 85%;
+}
+
+.redLine {
+  background-color: #ff0000;
+}
+
+.blueLine {
+  background-color: #00ccff;
+}
+
+.redLine,
+.blueLine {
+  position: absolute;
+  width: 90%;
+  height: 3%;
+  /*left: 50%;*/
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  border: 5px solid black;
+  pointer-events: none;
+}
+
+/*  ——  */
+
+.lineRowOne,
+.lineRowTwo,
+.lineRowThree,
+.lineTopRight,
+.lineBottomRight {
+  left: 50%;
+}
+
+.lineRowOne {
+  top: 16.5%;
+}
+
+.lineRowTwo {
+  top: 49.5%;
+}
+
+.lineRowThree {
+  top: 82.5%;
+}
+
+.lineTopRight {
+  top: 49.5%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.lineBottomRight {
+  top: 49.5%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/*  ——  */
+
+.lineColumnOne,
+.lineColumnTwo,
+.lineColumnThree {
+  top: 50%;
+  transform: rotate(90deg) translate(-1.5%, 1485%);
+}
+
+.lineColumnOne {
+  left: 16.5%;
+}
+
+.lineColumnTwo {
+  left: 49.5%;
+}
+
+.lineColumnThree {
+  left: 82.5%;
+}
+
+/*  ——  */
+
+.restartButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-height: 70vh;
+  min-height: 10vh;
+  max-width: 70vmin;
+  min-width: 10vmin;
+  background-color: gray;
+  color: white;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  transition: opacity 1s ease-out;
+  z-index: 6;
+}
+
+.button {
+  min-height: 1vmin;
+  max-height: 10vmin;
+  min-width: 5vmin;
+  max-width: 100%;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+}
+
+.hideButton {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.showButton {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.colBlack {
+  background-color: #000000;
+  color: white;
+}
+
+.colRed {
+  background-color: #ff0000;
+  color: white;
+}
+
+.colBlue {
+  background-color: #00ccff;
+  color: white;
+}
